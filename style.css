@@ -8,8 +8,85 @@
 }
 body{
     text-align: center;
+    background-color: rgb(240, 240, 240);
 }
 h1{
     margin-top: 35px;
     font-weight: 500;
 }
+main{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+.container{
+    width: 500px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    background-color: white;
+    box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.144);
+}
+.resultado{
+    display: flex;
+    height: 80px;
+    align-items: center;
+}
+input#pass{
+    margin-left: 6px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+.options button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: .6;
+    transition: all .2s;
+}
+.options button:hover{
+    opacity: 1;
+}
+
+.selection{
+    flex-basis: 450px;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 60%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #ff0000;
+    cursor: pointer;
+  }
+  
+
+.selection h3{
+    font-weight: 500;
+    font-size: 1.5em;
+    margin: 20px;
+}
+input#range-value{
+    border: none;
+    font-size: 1.3em;
+    width: 40px;
+}
+

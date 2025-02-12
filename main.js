@@ -9,7 +9,7 @@ const bar = document.querySelector('#bar')
 // functions
 function generation(){
     let passw = ""
-    const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*()-_=+[]{}}|;:,.?///";
+    const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*()-_=+|;:,.?/";
     for(let i = 0; i < range.value; i++) {
         const randNum = Math.floor(Math.random() * chars.length)
         passw += chars.substring(randNum, randNum+1)

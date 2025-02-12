@@ -53,6 +53,7 @@ function generation(){
         passw += chars.substring(randNum, randNum+1)
         
     }
+    password.style.fontSize = `${1.7 - range.value /70}em`
     password.value = passw;
 
     barColor(range.value);

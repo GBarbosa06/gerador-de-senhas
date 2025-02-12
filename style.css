@@ -89,7 +89,7 @@ input#pass{
     flex-basis: 450px;
 }
 .slider {
-    -webkit-appearance: none;
+    appearance: none;
     width: 60%;
     height: 15px;
     border-radius: 5px;  

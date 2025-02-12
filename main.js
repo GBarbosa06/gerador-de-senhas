@@ -28,6 +28,7 @@ function generation(){
     const numberChars = '123456789'
     const especialChars = '!@#$%&*()-_=+|;:,.?/'
 
+    
     if(lowerCaseCheck.checked){
         chars += lowerCaseChars;
     }
@@ -39,6 +40,12 @@ function generation(){
     }
     if(especialCheck.checked){
         chars += especialChars;
+    }
+
+    if(!(lowerCaseCheck.checked || upperCaseCheck.checked || numsCheck.checked || especialCheck.checked)){
+        window.alert('Ative pelo menos uma opção de personalização!');
+        lowerCaseCheck.checked = 'checked';
+        chars += lowerCaseChars;
     }
     
     for(let i = 0; i < range.value; i++) {
@@ -103,5 +110,9 @@ button2El.addEventListener('click', copy);
 rangeEl.addEventListener('input', generation); //gerar nova senha ao mudar o range
 rangeBoxEl.addEventListener('input', generation);
 resetButtonEl.addEventListener('click', generation); //substitui por uma nova senha
-
+        //" " " quando há atualização nos caracteres da senha
+lowerCaseCheck.addEventListener('input', generation);
+upperCaseCheck.addEventListener('input', generation);
+numsCheck.addEventListener('input', generation);
+especialCheck.addEventListener('input', generation);
 generation()

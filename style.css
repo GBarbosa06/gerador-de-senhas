@@ -127,7 +127,33 @@ input#range-value{
     width: 40px;
 }
 
-.config-container{
-    display: flex  ;
+.config{
+    display: block;
+    margin: 10px;
+    font-size: 1.3em;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
 }
-
+.config input{
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.config-container .checkmark{
+    position: absolute;
+    margin-left: 5px;
+    height: 25px;
+    width: 25px;
+    background-color: #dddddd;
+    transition: all .2s;
+}
+.config-container .checkmark:hover{
+    background-color: #cccccc;
+}
+.config-container input:checked ~ .checkmark{
+    background-color: #018d1fd2;
+    opacity: .7;
+}

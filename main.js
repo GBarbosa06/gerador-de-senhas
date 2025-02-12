@@ -1,8 +1,14 @@
 //consts & variables
-const range = document.querySelector('input#range')
-const rangeBox = document.querySelector('input#range-value')
-const password = document.querySelector('input#pass')
-const bar = document.querySelector('#bar')
+const range = document.querySelector('input#range');
+const rangeBox = document.querySelector('input#range-value');
+const password = document.querySelector('input#pass');
+const bar = document.querySelector('#bar');
+
+    //checkboxes on config class
+const lowerCaseCheck = document.querySelector('input#lower');
+const upperCaseCheck = document.querySelector('input#upper')
+const numsCheck = document.querySelector('input#nums')
+const especialCheck = document.querySelector('input#especialChar')
 
     //consts para eventListener
 const rangeEl = document.querySelector('input#range');
@@ -12,10 +18,29 @@ const button2El = document.querySelector('button#copy2');
 const resetButtonEl = document.querySelector('button#reset');
 
 
+
 // functions
 function generation(){
     let passw = ""
-    const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*()-_=+|;:,.?/";
+    let chars = ''
+    const lowerCaseChars = 'abcdefghijklmnpqrstuvwxyz'
+    const upperCaseChars = 'ABCDEFGHIJKLMNPQRSTUVWXYZ'
+    const numberChars = '123456789'
+    const especialChars = '!@#$%&*()-_=+|;:,.?/'
+
+    if(lowerCaseCheck.checked){
+        chars += lowerCaseChars;
+    }
+    if(upperCaseCheck.checked){
+        chars += upperCaseChars;
+    }
+    if(numsCheck.checked){
+        chars += numberChars;
+    }
+    if(especialCheck.checked){
+        chars += especialChars;
+    }
+    
     for(let i = 0; i < range.value; i++) {
         const randNum = Math.floor(Math.random() * chars.length)
         passw += chars.substring(randNum, randNum+1)
@@ -25,6 +50,7 @@ function generation(){
 
     barColor(range.value);
 }
+
 function barColor(value){
     if(value > 14){
         bar.className = 'completed';
@@ -61,7 +87,7 @@ function copy(){
 
 //listeners
 
-
+    //listeners de range
 rangeEl.addEventListener('change', rangeFunc);
 rangeEl.addEventListener('input', rangeFunc);
 password.addEventListener('input', rangeFunc);
@@ -73,7 +99,7 @@ password.addEventListener('input', rangesChangedOnPassLength);
 buttonEl.addEventListener('click', copy);
 button2El.addEventListener('click', copy);
 
-
+    //listeners de rodar a função principal
 rangeEl.addEventListener('input', generation); //gerar nova senha ao mudar o range
 rangeBoxEl.addEventListener('input', generation);
 resetButtonEl.addEventListener('click', generation); //substitui por uma nova senha

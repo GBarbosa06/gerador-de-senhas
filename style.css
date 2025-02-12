@@ -86,7 +86,7 @@ input#pass{
 }
 
 .selection{
-    flex-basis: 450px;
+    flex-basis: 400px;
 }
 .slider {
     appearance: none;
@@ -159,4 +159,23 @@ input#range-value{
     background-image: url(icons/check.png);
     background-position: center;
     background-size: cover;
+}
+
+button#copy2{
+    background-color: #018d1fd2;
+    border: none;
+    height: 50px;
+    width: 150px;
+    margin-top: 30px;
+    border-radius:10px;
+    font-size: 1.3em;
+    color: white;
+    font-weight: 300;
+    opacity: .7;
+    transition: all .3s;
+}
+button#copy2:hover{
+    opacity: 1;
+    scale: 1.1;
+    cursor: pointer;
 }

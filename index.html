@@ -33,22 +33,24 @@
         <div class="container selection"> 
             <h3>Personalize sua senha</h3>
             
+                
                 <input type="range" min="4" max="64" value="16" class="slider" id="range">
-              
-            <input type="number" id="range-value" min="4" max="64" value="16">
-            <br>
-
-            <!-- <input type="checkbox" name="config" id="lower">
-            <label for="lower">Minúsculas</label>
-            <input type="checkbox" name="config" id="upper">
-            <label for="upper">Minúsculas</label>
-            <input type="checkbox" name="config" id="nums">
-            <label for="nums">Números</label>
-            <input type="checkbox" name="config" id="especialChar">
-            <label for="especialChar">Caracteres Especiais</label> -->
-            <button id="copy2">Copiar!</button>
+                                
+                <input type="number" id="range-value" min="4" max="64" value="16">
+                    <!-- <br> -->
+                <div class="config-container">
+                    <input type="checkbox" name="config" id="lower" checked>
+                    <label for="lower">Minúsculas</label>
+                    <input type="checkbox" name="config" id="upper" checked>
+                    <label for="upper">Minúsculas</label>
+                    <input type="checkbox" name="config" id="nums" checked>
+                    <label for="nums">Números</label>
+                    <input type="checkbox" name="config" id="especialChar" checked>
+                    <label for="especialChar">Caracteres Especiais</label>
+                </div>
+            
         </div>
-        
+        <button id="copy2">Copiar!</button>
     </main>
 
     <script src="main.js"></script>

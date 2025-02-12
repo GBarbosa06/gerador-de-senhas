@@ -4,6 +4,12 @@ const rangeBox = document.querySelector('input#range-value')
 const password = document.querySelector('input#pass')
 const bar = document.querySelector('#bar')
 
+    //consts para eventListener
+const rangeEl = document.querySelector('input#range');
+const rangeBoxEl = document.querySelector('input#range-value');
+const buttonEl = document.querySelector('button#copy1');
+const button2El = document.querySelector('button#copy2');
+const resetButtonEl = document.querySelector('button#reset');
 
 
 // functions
@@ -39,6 +45,11 @@ function rangeFunc() {
 }
 function rangeBoxFunc() {
     range.value = rangeBox.value;
+    
+}
+function rangesChangedOnPassLength(){
+    rangeBox.value = password.value.length;
+    range.value = password.value.length;
 }
 
 function copy(){
@@ -49,21 +60,22 @@ function copy(){
 
 
 //listeners
-const rangeEl = document.querySelector('input#range');
+
+
 rangeEl.addEventListener('change', rangeFunc);
-rangeEl.addEventListener('change', generation);
-
-rangeEl.addEventListener('input', generation);
 rangeEl.addEventListener('input', rangeFunc);
+password.addEventListener('input', rangeFunc);
+rangeBoxEl.addEventListener('input', rangeBoxFunc);
+password.addEventListener('input', rangesChangedOnPassLength);
 
-const rangeBoxEl = document.querySelector('input#range-value');
-rangeBoxEl.addEventListener('change', rangeBoxFunc);
 
-const buttonEl = document.querySelector('button#copy1');
+    //botoes de copiar
 buttonEl.addEventListener('click', copy);
-const button2El = document.querySelector('button#copy2');
 button2El.addEventListener('click', copy);
 
-const resetButtonEl = document.querySelector('button#reset');
-resetButtonEl.addEventListener('click', generation);
+
+rangeEl.addEventListener('input', generation); //gerar nova senha ao mudar o range
+rangeBoxEl.addEventListener('input', generation);
+resetButtonEl.addEventListener('click', generation); //substitui por uma nova senha
+
 generation()

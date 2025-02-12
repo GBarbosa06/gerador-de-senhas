@@ -99,6 +99,9 @@ input#pass{
     -webkit-transition: .2s;
     transition: opacity .2s;
   }
+  .slider:hover{
+    opacity: 1;
+  }
   
   .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -106,7 +109,7 @@ input#pass{
     width: 25px;
     height: 25px;
     border-radius: 50%; 
-    background: #ff0000;
+    background: #018d1fd2;
     cursor: pointer;
   }
   
@@ -114,11 +117,17 @@ input#pass{
 .selection h3{
     font-weight: 500;
     font-size: 1.5em;
-    margin: 20px;
+    margin: 20px 0px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(199, 199, 199);
 }
 input#range-value{
     border: none;
     font-size: 1.3em;
     width: 40px;
+}
+
+.config-container{
+    display: flex  ;
 }
 

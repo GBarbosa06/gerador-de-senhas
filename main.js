@@ -48,11 +48,6 @@ function copy(){
 
 
 
-
-
-
-
-
 //listeners
 const rangeEl = document.querySelector('input#range');
 rangeEl.addEventListener('change', rangeFunc);

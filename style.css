@@ -29,7 +29,7 @@ main{
     background-color: white;
     box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.144);
 }
-.resultado{
+.password-box{
     display: flex;
     height: 80px;
     align-items: center;
@@ -41,6 +41,38 @@ input#pass{
     outline: none;
     font-size: 1.5em;
     font-weight: 400;
+}
+
+.security-bar{
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 0px 0px 8px 8px;
+}
+#bar{
+    border-radius: 0px 0px 8px 8px;
+}
+.security-bar .completed{
+    border-top-right-radius: 0px;
+    background-color: green;
+    width: 100%;
+}
+.security-bar .almost-completed{
+    border-top-right-radius: 0px;
+    background-color: rgb(137, 196, 0);
+    width: 75%;
+}
+.security-bar .halfbar{
+    background-color: #f2c94c;
+    width: 50%;
+}
+.security-bar .critical{
+    background-color: #eb5757;
+    width: 20%;
+}
+
+#bar{
+    height: 10px;
+    border: 0px 8px 8px 8px;
 }
 .options button{
     background-color: transparent;

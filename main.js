@@ -2,20 +2,38 @@
 const range = document.querySelector('input#range')
 const rangeBox = document.querySelector('input#range-value')
 const password = document.querySelector('input#pass')
+const bar = document.querySelector('#bar')
 
 
 
 // functions
 function generation(){
     let passw = ""
-    const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+[]{}}|;:',.<>?///`~";
+    const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*()-_=+[]{}}|;:,.?///";
     for(let i = 0; i < range.value; i++) {
         const randNum = Math.floor(Math.random() * chars.length)
         passw += chars.substring(randNum, randNum+1)
         
     }
     password.value = passw;
+
+    barColor(range.value);
 }
+function barColor(value){
+    if(value > 14){
+        bar.className = 'completed';
+    }
+    else if(value >= 11){
+        bar.className = 'almost-completed';
+    }
+    else if(value > 7){
+        bar.className = 'halfbar';
+    }
+    else if(value < 8){
+        bar.className = 'critical';
+    }
+}
+
 function rangeFunc() {
     rangeBox.value = range.value;
 }

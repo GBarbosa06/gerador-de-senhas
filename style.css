@@ -156,4 +156,7 @@ input#range-value{
 .config-container input:checked ~ .checkmark{
     background-color: #018d1fd2;
     opacity: .7;
+    background-image: url(icons/check.png);
+    background-position: center;
+    background-size: cover;
 }
